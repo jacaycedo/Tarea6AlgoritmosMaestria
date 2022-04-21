@@ -1,0 +1,6 @@
+g
+c
+d
+gcd
+cd
+gc
