@@ -82,8 +82,12 @@ public class ArregloSufijos {
 			int indiceAbajo = nuevoIndice + 1;
 			boolean validoArriba = true;
 			boolean validoAbajo = true;
-			while(validoArriba && indiceArriba >= 0)
+			while(validoArriba && indiceArriba >= 0 && indiceArriba < realText.length())
 			{	
+				if(indiceArriba == 100000)
+				{
+					System.out.println("s");
+				}
 				String subtext = realText.substring(suffix.get(indiceArriba));
 				if(subtext.compareTo(buscada) < 0)
 				{
@@ -99,7 +103,7 @@ public class ArregloSufijos {
 					validoArriba = false;
 				}
 			}
-			while(validoAbajo && indiceAbajo < suffix.size())
+			while(validoAbajo && indiceAbajo < suffix.size() && indiceAbajo <= 0)
 			{	
 				String subtext = realText.substring(suffix.get(indiceAbajo));
 				if(subtext.compareToIgnoreCase(buscada) < 0)
